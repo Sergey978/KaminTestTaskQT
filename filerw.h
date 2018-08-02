@@ -12,16 +12,14 @@ public:
 
 	std::vector<char> readBlockFromEnd(const int beginPoint, int dataSize);
     std::vector<char> readBlockFromBegin(const int beginPoint, int dataSize);
-	void writeBlock(std::vector<char> data, int dataSize);
+    void writeBlock(std::vector<char> &data);
 	long getFileSize();
 
 	~FileRW();
 
 private:
 	std::ifstream inputFile;
-	std::ofstream outputFile;
-	int startPoint;
-	int endPoint;
+	std::ofstream outputFile;	
 	bool  firstOpened;
 
 };

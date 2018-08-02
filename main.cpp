@@ -7,7 +7,7 @@ using namespace std;
 int main(int argc, char* argv[])
 {
 
-    std::cout  << argv[1];
+    std::cout  << argv[1] << std::endl;
     FileRW *file = new FileRW;
     IProcessor *proc ;
     Factory *myFactory = new Factory(*file);

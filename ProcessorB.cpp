@@ -26,13 +26,14 @@ void ProcessorB::readSlice()
 	}
 
     block = file.readBlockFromBegin(pos , minorBufferSize);
+    pos += block.size();
 	curState = Find;
 
 }
 
 void ProcessorB::writeSlice()
 {
-	file.writeBlock(block, block.size());
+    file.writeBlock(block);
     curState = Read;
 }
 
@@ -46,7 +47,7 @@ void ProcessorB::replaceDelimiter()
 			block[i] = newDelimiter;
 		}
 	}
-	pos += block.size();
+
 	curState = Write;
 
 }

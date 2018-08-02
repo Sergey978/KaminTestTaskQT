@@ -44,7 +44,7 @@ void ProcessorA::writeSlice()
 			minorBufferSize = bufferSize;
 		}
 		block = file.readBlockFromEnd(pos - readLength, minorBufferSize);
-		file.writeBlock(block, block.size());
+        file.writeBlock(block);
 		readLength += minorBufferSize;
 		blockLength -= minorBufferSize;
 	}

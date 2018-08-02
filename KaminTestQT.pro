@@ -12,9 +12,9 @@ SOURCES += main.cpp \
 
 DISTFILES += \
     KaminTestQT.pro.user \
-    example.txt \
-    example1.txt \
-    example_out.txt
+    CMakeLists.txt
+
+
 
 HEADERS += \
     Factory.h \
